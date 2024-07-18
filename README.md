@@ -1,1 +1,1 @@
-# cupel-co
+# Cupel
