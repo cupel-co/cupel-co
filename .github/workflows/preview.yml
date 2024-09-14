@@ -1,0 +1,17 @@
+name: Preview
+
+on:
+  pull_request:
+    types: 
+      - opened
+      - reopened
+      - synchronize
+
+concurrency:
+  cancel-in-progress: false
+  group: ${{ github.workflow }}-${{ github.ref_name }}
+
+jobs:
+  generate:
+    name: Generate
+    uses: cupel-co/workflows/.github/workflows/generate-version.yml@v0.2.0
