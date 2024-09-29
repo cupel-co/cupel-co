@@ -9,9 +9,9 @@ on:
 
 concurrency:
   cancel-in-progress: false
-  group: ${{ github.workflow }}-${{ github.ref_name }}
+  group: '${{ github.workflow }}-${{ github.ref_name }}'
 
 jobs:
   generate:
     name: Generate
-    uses: cupel-co/workflows/.github/workflows/generate-version.yml@v0.2.0
+    uses: cupel-co/workflows/.github/workflows/generate-version.yml@v0.7.0

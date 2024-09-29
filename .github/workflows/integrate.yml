@@ -1,0 +1,30 @@
+name: Integrate
+
+on:
+  push:
+    branches:
+      - main
+
+concurrency:
+  cancel-in-progress: false
+  group: '${{ github.workflow }}-${{ github.ref_name }}'
+
+jobs:
+  generate:
+    name: Generate
+    uses: cupel-co/workflows/.github/workflows/generate-version.yml@v0.7.0
+
+  release:
+    name: Release
+    uses: cupel-co/workflows/.github/workflows/github-release.yml@v0.7.0
+    needs:
+      - generate
+    permissions:
+      contents: write
+    with:
+      tag: 'v${{ needs.generate.outputs.sem-ver }}'
+    secrets:
+      google-chat-webhook-url: '${{ secrets.GOOGLE_CHAT_WEBHOOK_URL }}'
+      gpg-key: '${{ secrets.GH_GPG_PRIVATE_KEY }}'
+      gpg-password: '${{ secrets.GH_GPG_PRIVATE_KEY_PASSWORD }}'
+      token: '${{ secrets.GH_RELEASE_PAT }}'
