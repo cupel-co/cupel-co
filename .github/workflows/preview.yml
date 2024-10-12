@@ -12,6 +12,6 @@ concurrency:
   group: '${{ github.workflow }}-${{ github.ref_name }}'
 
 jobs:
-  generate:
-    name: Generate
-    uses: cupel-co/workflows/.github/workflows/generate-version.yml@v0.7.0
+  version:
+    name: Version
+    uses: cupel-co/workflows/.github/workflows/version.generate.yml@v0.18.0
