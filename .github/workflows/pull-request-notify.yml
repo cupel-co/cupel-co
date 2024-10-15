@@ -11,8 +11,8 @@ concurrency:
   group: '${{ github.workflow }}-${{ github.ref_name }}'
 
 jobs:
-  notify:
-    name: Notify
-    uses: cupel-co/workflows/.github/workflows/notify-pull-request.yml@v0.7.0
+  pull-request:
+    name: Pull Request
+    uses: cupel-co/workflows/.github/workflows/pull-request.notify.yml@v0.23.0
     secrets:
       google-chat-webhook-url: '${{ secrets.GOOGLE_CHAT_WEBHOOK_URL }}'

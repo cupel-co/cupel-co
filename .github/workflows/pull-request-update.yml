@@ -1,0 +1,22 @@
+﻿name: Update PR
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+
+concurrency:
+  cancel-in-progress: false
+  group: '${{ github.workflow }}-${{ github.ref_name }}'
+
+jobs:
+  pull-request:
+    name: Pull Request
+    uses: cupel-co/workflows/.github/workflows/pull-request.update.yml@v0.23.0
+    permissions:
+      issues: read
+      pull-requests: write
+      repository-projects: read
+    with:
+      environment: Preview
