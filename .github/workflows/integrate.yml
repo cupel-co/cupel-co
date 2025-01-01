@@ -16,7 +16,7 @@ jobs:
 
   release:
     name: Release
-    uses: cupel-co/workflows/.github/workflows/release.github.yml@v0.26.0
+    uses: cupel-co/workflows/.github/workflows/release.create.yml@v0.26.0
     needs:
       - version
     permissions:
