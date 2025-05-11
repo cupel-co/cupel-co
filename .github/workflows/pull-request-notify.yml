@@ -13,6 +13,6 @@ concurrency:
 jobs:
   pull-request:
     name: Pull Request
-    uses: cupel-co/workflows/.github/workflows/pull-request.notify.yml@v0.26.0
+    uses: cupel-co/workflows/.github/workflows/pull-request.notify.yml@v0.29.0
     secrets:
       google-chat-webhook-url: '${{ secrets.GOOGLE_CHAT_WEBHOOK_URL }}'
