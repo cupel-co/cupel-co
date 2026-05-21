@@ -13,7 +13,7 @@ concurrency:
 jobs:
   pull-request:
     name: Pull Request
-    uses: cupel-co/workflows/.github/workflows/pull-request.update.yml@v0.29.0
+    uses: cupel-co/workflows/.github/workflows/pull-request.update.yml@90206ef2c0f1c41fc9166fff3dba678e66277667
     permissions:
       issues: read
       pull-requests: write

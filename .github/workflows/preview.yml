@@ -14,4 +14,4 @@ concurrency:
 jobs:
   version:
     name: Version
-    uses: cupel-co/workflows/.github/workflows/version.generate.yml@v0.29.0
+    uses: cupel-co/workflows/.github/workflows/version.generate.yml@90206ef2c0f1c41fc9166fff3dba678e66277667
