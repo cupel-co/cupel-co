@@ -1,0 +1,4 @@
+﻿# GitHub CODEOWNERS file
+
+# Platform team reviews changes to .github and infrastructure
+* @cupel-co/platform
