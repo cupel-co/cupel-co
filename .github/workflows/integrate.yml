@@ -12,11 +12,11 @@ concurrency:
 jobs:
   version:
     name: Version
-    uses: cupel-co/workflows/.github/workflows/version.generate.yml@e126a14c220d8daa8d84e59431446dbb18a24e7d
+    uses: cupel-co/workflows/.github/workflows/version.generate.yml@ec59454b906ec3d2abdce35b1d83a1891ca618bf
 
   release:
     name: Release
-    uses: cupel-co/workflows/.github/workflows/release.create.yml@e126a14c220d8daa8d84e59431446dbb18a24e7d
+    uses: cupel-co/workflows/.github/workflows/release.create.yml@ec59454b906ec3d2abdce35b1d83a1891ca618bf
     needs:
       - version
     permissions:
