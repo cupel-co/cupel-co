@@ -1,4 +1,4 @@
-﻿name: Update PR
+name: Update PR
 
 on:
   pull_request:
@@ -14,7 +14,7 @@ concurrency:
 jobs:
   pull-request:
     name: Pull Request
-    uses: cupel-co/workflows/.github/workflows/pull-request.update.yml@ec59454b906ec3d2abdce35b1d83a1891ca618bf
+    uses: cupel-co/workflows/.github/workflows/pull-request.update.yml@3b973fd38ee46e7b2c4f9918d75406dc52e615b1
     permissions:
       issues: read
       pull-requests: write
