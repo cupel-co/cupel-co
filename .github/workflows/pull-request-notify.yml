@@ -14,5 +14,9 @@ jobs:
   pull-request:
     name: Pull Request
     uses: cupel-co/workflows/.github/workflows/pull-request.notify.yml@ec59454b906ec3d2abdce35b1d83a1891ca618bf
+    permissions:
+      issues: read
+      pull-requests: read
+      repository-projects: read
     secrets:
       google-chat-webhook-url: '${{ secrets.GOOGLE_CHAT_WEBHOOK_URL }}'

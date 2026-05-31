@@ -20,4 +20,4 @@ jobs:
       pull-requests: write
       repository-projects: read
     with:
-      environment: Preview
+      environment: Production

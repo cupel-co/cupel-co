@@ -2,7 +2,7 @@ name: Preview
 
 on:
   pull_request:
-    types: 
+    types:
       - opened
       - reopened
       - synchronize
@@ -15,3 +15,5 @@ jobs:
   version:
     name: Version
     uses: cupel-co/workflows/.github/workflows/version.generate.yml@ec59454b906ec3d2abdce35b1d83a1891ca618bf
+    permissions:
+      contents: read

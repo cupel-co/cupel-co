@@ -13,6 +13,8 @@ jobs:
   version:
     name: Version
     uses: cupel-co/workflows/.github/workflows/version.generate.yml@ec59454b906ec3d2abdce35b1d83a1891ca618bf
+    permissions:
+      contents: read
 
   release:
     name: Release
@@ -22,9 +24,9 @@ jobs:
     permissions:
       contents: write
     with:
-      tag: 'v${{ needs.version.outputs.sem-ver }}'
+      tag: "v${{ needs.version.outputs.sem-ver }}"
     secrets:
       google-chat-webhook-url: '${{ secrets.GOOGLE_CHAT_WEBHOOK_URL }}'
-      gpg-private-key: '${{ secrets.GH_GPG_PRIVATE_KEY }}'
-      gpg-private-key-password: '${{ secrets.GH_GPG_PRIVATE_KEY_PASSWORD }}'
-      token: '${{ secrets.GH_RELEASE_PAT }}'
+      gpg-private-key: "${{ secrets.GH_GPG_PRIVATE_KEY }}"
+      gpg-private-key-password: "${{ secrets.GH_GPG_PRIVATE_KEY_PASSWORD }}"
+      token: "${{ secrets.GH_RELEASE_PAT }}"
